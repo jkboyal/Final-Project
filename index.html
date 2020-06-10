@@ -10,7 +10,6 @@
     <!-- Bootstrap v4.4.1 CSS stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
-
   <body class="mt-5"> 
     <!-- Adding navigator bar -->
     <!-- Sticky navigator bar didn't work in my browser so had to used fixed -->
@@ -26,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">About me <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="https://jkboyal.github.io/Final-Project/profile">About me <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Past Travel stories</a>
@@ -49,7 +48,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>My Travel Bucket</title>
+    <title>My Travel Bucketlist</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -59,11 +58,14 @@
     <style>
       td,
       th {
-        text-align: right;
+        text-align: center;
       }
 
       .non-numeric {
-        text-align: left;
+        text-align: center;
+      }
+      .numeric {
+        text-align: center;
       }
     </style>
   </head>
@@ -78,17 +80,17 @@
         <div class="col">
           <form>
             <div class="form-group">
-              <label for="movie-filter">Filter</label>
+              <label for="dest-filter">Filter</label>
               <input
                 type="text"
                 class="form-control"
-                id="movie-filter"
+                id="dest-filter"
                 placeholder="Filter destinations"
               />
             </div>
           </form>
 
-          <table class="table table-striped table-hover destination" width="100%">
+          <table class="table table-striped table-hover holiday" width="100%">
             <thead class="thead-dark">
               <tr>
                 <th scope="col" class="non-numeric">Destination City</th>
@@ -96,7 +98,9 @@
                 <th scope="col">Cost for One (in $)/Week</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+
+            </tbody>
           </table>
         </div>
       </div>
@@ -118,9 +122,52 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/destination.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/destapp.js"></script>
     <script>
-      renderMovies(DESTINATION);
+      function renderTableCell(value, isNumeric ){
+        var td = document.createElement("td");
+
+        td.textContent = value;
+
+        if(isNumeric){
+
+          td.classList.add("numeric");
+
+        }
+
+        return td; 
+
+      }
+
+      function renderDestinationRow(place){
+        var tr = document.createElement("tr");
+
+      var cell1 = renderTableCell(place.city );
+      var cell2 = renderTableCell(place.country );
+      var cell3 = renderTableCell(place.cost, true);
+
+      tr.appendChild(cell1);
+      tr.appendChild(cell2);
+      tr.appendChild(cell3);
+
+      return tr;
+      }
+
+
+      function renderDestinationTable(destinationArray) {
+
+        var tbody = document.querySelector("table.holiday tbody");
+
+tbody.textContent = "";
+
+destinationArray.forEach(function(place){
+  tbody.appendChild(renderDestinationRow(place));
+          
+        });
+      }
+
+      renderDestinationTable(DESTINATION);
+
     </script>
   </body>
 </html> 

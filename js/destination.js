@@ -139,7 +139,7 @@ const DESTINATION = [
         "cost": 800
     },
     {
-        "city": "Reykjavik";
+        "city": "Reykjavik",
         "country": "Iceland",
         "season": "July to September",
         "cost": 1600

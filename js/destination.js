@@ -31,7 +31,7 @@ const DESTINATION = [
         "country": "USA",
         "season": "April to October",
         "cost": 1800
-    }
+    },
     {
         "city": "Banff, Alberta",
         "country": "Canada",

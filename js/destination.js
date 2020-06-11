@@ -1,3 +1,5 @@
+//js array//
+
 const DESTINATION = [
     {
         "city": "Paris",

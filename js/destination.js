@@ -3,7 +3,7 @@ const DESTINATION = [
         "city": "Paris",
         "country": "France",
         "season": "June to August",
-        "cost": 3500
+        "cost": 2800
 
     },
     {
@@ -25,6 +25,12 @@ const DESTINATION = [
         "cost": 1300
     },  
     {
+        "city": "New York",
+        "country": "USA",
+        "season": "April to October",
+        "cost": 1800
+    }
+    {
         "city": "Banff, Alberta",
         "country": "Canada",
         "season": "June to August",
@@ -42,6 +48,13 @@ const DESTINATION = [
         "season": "March to May",
         "cost": 1800
     },  
+    {
+        "city": "Florence",
+        "country": "Italy",
+        "season": "May to September",
+        "cost": 1100
+
+    },
     {
         "city": "Nashville",
         "country": "USA",
@@ -62,17 +75,10 @@ const DESTINATION = [
 
     },
     {
-        "city": "Florence",
-        "country": "Italy",
-        "season": "May to September",
-        "cost": 1100
-
-    },
-    {
-        "city": "Vancouver",
-        "country": "Canada",
-        "season": "May to September",
-        "cost": 1000
+        "city": "Udaipur",
+        "country": "India",
+        "season": "September to February",
+        "cost": 1200
 
     },
     {
@@ -87,5 +93,54 @@ const DESTINATION = [
         "country": "Japan",
         "season": "March to April",
         "cost": 1400
+    },
+    {
+        "city": "Ladakh",
+        "country": "India",
+        "season": "April to June",
+        "cost": 250
+    },  
+    {
+        "city": "Vancouver",
+        "country": "Canada",
+        "season": "May to September",
+        "cost": 1000
+    },
+    {
+        "city": "Las Vegas",
+        "country": "USA",
+        "season": "March to May & September to November",
+        "cost": 1900
+    },
+    {
+        "city": "Amsterdam",
+        "country": "Netherlands",
+        "season": "May to October",
+        "cost": 1300
+    },
+    {
+        "city": "Prague",
+        "country": "Czech Republic",
+        "season": "May to September",
+        "cost": 1450
+    },
+    {
+        "city": "San Francisco",
+        "country": "USA",
+        "season": "May to June & September to November",
+        "cost": 1500
+    },
+    {
+        "city": "Istanbul",
+        "country": "Turkey",
+        "season": "March to May & September to November",
+        "cost": 800
+    },
+    {
+        "city": "Reykjavik";
+        "country": "Iceland",
+        "season": "July to September",
+        "cost": 1600
     }
+
 ];
